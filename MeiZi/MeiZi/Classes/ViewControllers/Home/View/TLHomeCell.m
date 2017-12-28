@@ -10,15 +10,25 @@
 
 @implementation TLHomeCell
 
-- (void)awakeFromNib {
-    [super awakeFromNib];
-    // Initialization code
+#pragma mark - Private Meths
+- (instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier {
+    self = [super initWithStyle:style reuseIdentifier:reuseIdentifier];
+    if (self) {
+        
+    }
+    return self;
 }
 
-- (void)setSelected:(BOOL)selected animated:(BOOL)animated {
-    [super setSelected:selected animated:animated];
-
-    // Configure the view for the selected state
+#pragma mark - Class Meths
++ (instancetype)createCellWithTableView:(UITableView *)tableView {
+    static NSString *HomeCellIdentifier = @"HomeCellIdentifier";
+    TLHomeCell *cell = [tableView dequeueReusableCellWithIdentifier:HomeCellIdentifier];
+    if (!cell) {
+        cell = [[TLHomeCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:HomeCellIdentifier];
+    }
+    return cell;
 }
+
+
 
 @end

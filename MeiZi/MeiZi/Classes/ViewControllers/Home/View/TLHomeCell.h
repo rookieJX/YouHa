@@ -10,4 +10,13 @@
 
 @interface TLHomeCell : UITableViewCell
 
+
+/**
+ 创建表格
+
+ @param tableView 表格视图
+ @return 表格
+ */
++ (instancetype)createCellWithTableView:(UITableView *)tableView;
+
 @end
