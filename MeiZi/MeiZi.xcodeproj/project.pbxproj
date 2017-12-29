@@ -31,6 +31,7 @@
 		186725641FF4E76000844AEA /* TLToastButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 186725631FF4E76000844AEA /* TLToastButton.m */; };
 		186725671FF4EA1800844AEA /* TLHomeView.m in Sources */ = {isa = PBXBuildFile; fileRef = 186725661FF4EA1800844AEA /* TLHomeView.m */; };
 		1867256A1FF4F06100844AEA /* TLHomeCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 186725691FF4F06100844AEA /* TLHomeCell.m */; };
+		18BE0FE11FF5F25000FBCA4E /* TLBasicView.m in Sources */ = {isa = PBXBuildFile; fileRef = 18BE0FE01FF5F25000FBCA4E /* TLBasicView.m */; };
 		6BB1DA180BBAC5178A656248 /* libPods-MeiZi.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 93C8ED81B2A0978B4B8AF272 /* libPods-MeiZi.a */; };
 /* End PBXBuildFile section */
 
@@ -113,6 +114,8 @@
 		186725661FF4EA1800844AEA /* TLHomeView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TLHomeView.m; sourceTree = "<group>"; };
 		186725681FF4F06100844AEA /* TLHomeCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TLHomeCell.h; sourceTree = "<group>"; };
 		186725691FF4F06100844AEA /* TLHomeCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TLHomeCell.m; sourceTree = "<group>"; };
+		18BE0FDF1FF5F25000FBCA4E /* TLBasicView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TLBasicView.h; sourceTree = "<group>"; };
+		18BE0FE01FF5F25000FBCA4E /* TLBasicView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TLBasicView.m; sourceTree = "<group>"; };
 		93C8ED81B2A0978B4B8AF272 /* libPods-MeiZi.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-MeiZi.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A717928DEC5FC293A3AC4433 /* Pods-MeiZi.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MeiZi.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MeiZi/Pods-MeiZi.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -218,6 +221,7 @@
 		186724E41FF490D700844AEA /* Basic */ = {
 			isa = PBXGroup;
 			children = (
+				18BE0FDE1FF5F23C00FBCA4E /* View */,
 				186724E51FF490D700844AEA /* Controller */,
 				186724E81FF490D700844AEA /* Model */,
 			);
@@ -418,6 +422,15 @@
 				186725631FF4E76000844AEA /* TLToastButton.m */,
 			);
 			path = DefineView;
+			sourceTree = "<group>";
+		};
+		18BE0FDE1FF5F23C00FBCA4E /* View */ = {
+			isa = PBXGroup;
+			children = (
+				18BE0FDF1FF5F25000FBCA4E /* TLBasicView.h */,
+				18BE0FE01FF5F25000FBCA4E /* TLBasicView.m */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		26BEC8871FF53D120043A81D /* NetWork */ = {
@@ -644,6 +657,7 @@
 				186725451FF4BBFE00844AEA /* UIView+TLExtension.m in Sources */,
 				1867250C1FF4914100844AEA /* TLDiscoveryViewController.m in Sources */,
 				186725041FF490D700844AEA /* TLBasicController.m in Sources */,
+				18BE0FE11FF5F25000FBCA4E /* TLBasicView.m in Sources */,
 				1867251D1FF4925700844AEA /* AppDelegate.m in Sources */,
 				1867254B1FF4BC4A00844AEA /* NSDictionary+TLExtension.m in Sources */,
 				1867256A1FF4F06100844AEA /* TLHomeCell.m in Sources */,

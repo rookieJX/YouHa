@@ -40,6 +40,7 @@
     TLHomeCell *cell = [tableView dequeueReusableCellWithIdentifier:HomeCellIdentifier];
     if (!cell) {
         cell = [[TLHomeCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:HomeCellIdentifier];
+        cell.backgroundColor    = [UIColor blackColor];
     }
     return cell;
 }

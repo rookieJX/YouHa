@@ -29,6 +29,7 @@
 
 - (void)createTableViewWithFrame:(CGRect)frame {
     TableView = [[UITableView alloc] initWithFrame:frame style:UITableViewStyleGrouped];
+    TableView.backgroundColor   = [UIColor blackColor];
     TableView.delegate  = self;
     TableView.dataSource = self;
     [self addSubview:TableView];

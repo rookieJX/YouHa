@@ -20,7 +20,8 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
+    self.tabBar.barStyle = UIBarStyleBlack;
+    self.tabBar.tintColor   = [UIColor blackColor];
     [self setupAllChildVc];
     
 }
