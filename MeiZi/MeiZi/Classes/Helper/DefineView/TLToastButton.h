@@ -10,5 +10,7 @@
 
 @interface TLToastButton : UIButton
 
-- (instancetype)initWithFrame:(CGRect)frame superView:(UIView *)view;
+- (instancetype)initWithSuperView:(UIView *)superView;
+
+- (void)show;
 @end

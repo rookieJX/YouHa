@@ -7,6 +7,7 @@
 //
 
 #import "TLHomeView.h"
+#import "TLHomeCell.h"
 
 @interface TLHomeView ()<UITableViewDelegate,UITableViewDataSource>
 {
@@ -41,12 +42,7 @@
     return 10;
 }
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    static NSString *identifier = @"cell";
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:identifier];
-    if (!cell) {
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:identifier];
-        cell.backgroundColor = kRandColor;
-    }
+    TLHomeCell *cell = [TLHomeCell createCellWithTableView:tableView];
     return cell;
 }
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
