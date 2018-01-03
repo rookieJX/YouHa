@@ -28,7 +28,7 @@
 }
 
 - (void)setupHomeView {
-    TLHomeView *homeView = [[TLHomeView alloc] initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, SCREEN_HEIGHT-TABBAR_HEIGHT)];
+    TLHomeView *homeView = [[TLHomeView alloc] initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, SCREEN_HEIGHT-NAVBAR_HEIGHT-STATUSBAR_HEIGHT-TABBAR_HEIGHT)];
     [self.view addSubview:homeView];
 }
 
