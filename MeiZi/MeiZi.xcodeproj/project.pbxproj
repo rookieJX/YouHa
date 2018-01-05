@@ -32,6 +32,9 @@
 		186725671FF4EA1800844AEA /* TLHomeView.m in Sources */ = {isa = PBXBuildFile; fileRef = 186725661FF4EA1800844AEA /* TLHomeView.m */; };
 		1867256A1FF4F06100844AEA /* TLHomeCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 186725691FF4F06100844AEA /* TLHomeCell.m */; };
 		18BE0FE11FF5F25000FBCA4E /* TLBasicView.m in Sources */ = {isa = PBXBuildFile; fileRef = 18BE0FE01FF5F25000FBCA4E /* TLBasicView.m */; };
+		18D46EFE1FFC6F4300BB738F /* TLTabBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 18D46EFD1FFC6F4300BB738F /* TLTabBar.m */; };
+		18EB6D2D1FFF490F003C7BF3 /* TLHomeArraryDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 18EB6D2C1FFF490F003C7BF3 /* TLHomeArraryDataSource.m */; };
+		18EB6D301FFF4920003C7BF3 /* TLHomeArrayDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 18EB6D2F1FFF4920003C7BF3 /* TLHomeArrayDelegate.m */; };
 		6BB1DA180BBAC5178A656248 /* libPods-MeiZi.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 93C8ED81B2A0978B4B8AF272 /* libPods-MeiZi.a */; };
 /* End PBXBuildFile section */
 
@@ -116,6 +119,12 @@
 		186725691FF4F06100844AEA /* TLHomeCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TLHomeCell.m; sourceTree = "<group>"; };
 		18BE0FDF1FF5F25000FBCA4E /* TLBasicView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TLBasicView.h; sourceTree = "<group>"; };
 		18BE0FE01FF5F25000FBCA4E /* TLBasicView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TLBasicView.m; sourceTree = "<group>"; };
+		18D46EFC1FFC6F4300BB738F /* TLTabBar.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TLTabBar.h; sourceTree = "<group>"; };
+		18D46EFD1FFC6F4300BB738F /* TLTabBar.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TLTabBar.m; sourceTree = "<group>"; };
+		18EB6D2B1FFF490F003C7BF3 /* TLHomeArraryDataSource.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TLHomeArraryDataSource.h; sourceTree = "<group>"; };
+		18EB6D2C1FFF490F003C7BF3 /* TLHomeArraryDataSource.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TLHomeArraryDataSource.m; sourceTree = "<group>"; };
+		18EB6D2E1FFF4920003C7BF3 /* TLHomeArrayDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TLHomeArrayDelegate.h; sourceTree = "<group>"; };
+		18EB6D2F1FFF4920003C7BF3 /* TLHomeArrayDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TLHomeArrayDelegate.m; sourceTree = "<group>"; };
 		93C8ED81B2A0978B4B8AF272 /* libPods-MeiZi.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-MeiZi.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A717928DEC5FC293A3AC4433 /* Pods-MeiZi.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MeiZi.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MeiZi/Pods-MeiZi.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -211,6 +220,7 @@
 		186724E01FF490D700844AEA /* Main */ = {
 			isa = PBXGroup;
 			children = (
+				18D46EFB1FFC6F2200BB738F /* View */,
 				1867253B1FF494C700844AEA /* Ohter */,
 				1867251A1FF4925700844AEA /* AppDelegate */,
 				186725131FF491BF00844AEA /* Controller */,
@@ -303,6 +313,8 @@
 		186724F41FF490D700844AEA /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				18EB6D2A1FFF48D9003C7BF3 /* Model */,
+				18EB6D291FFF48D8003C7BF3 /* ModelControl */,
 				186724F51FF490D700844AEA /* Controller */,
 				186724F81FF490D700844AEA /* View */,
 			);
@@ -431,6 +443,33 @@
 				18BE0FE01FF5F25000FBCA4E /* TLBasicView.m */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		18D46EFB1FFC6F2200BB738F /* View */ = {
+			isa = PBXGroup;
+			children = (
+				18D46EFC1FFC6F4300BB738F /* TLTabBar.h */,
+				18D46EFD1FFC6F4300BB738F /* TLTabBar.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		18EB6D291FFF48D8003C7BF3 /* ModelControl */ = {
+			isa = PBXGroup;
+			children = (
+				18EB6D2B1FFF490F003C7BF3 /* TLHomeArraryDataSource.h */,
+				18EB6D2C1FFF490F003C7BF3 /* TLHomeArraryDataSource.m */,
+				18EB6D2E1FFF4920003C7BF3 /* TLHomeArrayDelegate.h */,
+				18EB6D2F1FFF4920003C7BF3 /* TLHomeArrayDelegate.m */,
+			);
+			path = ModelControl;
+			sourceTree = "<group>";
+		};
+		18EB6D2A1FFF48D9003C7BF3 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 		26BEC8871FF53D120043A81D /* NetWork */ = {
@@ -646,6 +685,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				18EB6D2D1FFF490F003C7BF3 /* TLHomeArraryDataSource.m in Sources */,
 				186725481FF4BC2C00844AEA /* NSArray+TLExtension.m in Sources */,
 				186725581FF4C4C200844AEA /* UIImage+TLExtension.m in Sources */,
 				1867254E1FF4BCE100844AEA /* UIBarButtonItem+TLExtension.m in Sources */,
@@ -668,6 +708,8 @@
 				186725161FF491D600844AEA /* TLTabBarController.m in Sources */,
 				1867250F1FF4915100844AEA /* TLMessageViewController.m in Sources */,
 				186724971FF4799500844AEA /* main.m in Sources */,
+				18EB6D301FFF4920003C7BF3 /* TLHomeArrayDelegate.m in Sources */,
+				18D46EFE1FFC6F4300BB738F /* TLTabBar.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

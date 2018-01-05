@@ -8,11 +8,19 @@
 
 #import "TLHomeView.h"
 #import "TLHomeCell.h"
+#import "TLHomeArraryDataSource.h"
+#import "TLHomeArrayDelegate.h"
 
-@interface TLHomeView ()<UITableViewDelegate,UITableViewDataSource>
+@interface TLHomeView ()<UITableViewDelegate>
 {
     UITableView *TableView;
 }
+/** 数据源 */
+@property (strong, nonatomic) TLHomeArraryDataSource * tableViewDataSource;
+/** 代理 */
+@property (strong, nonatomic) TLHomeArrayDelegate * tableViewDelegate;
+/** homeArray */
+@property (strong, nonatomic) NSArray * homeItemArray;
 @end
 
 
@@ -31,35 +39,31 @@
     TableView = [[UITableView alloc] initWithFrame:frame style:UITableViewStyleGrouped];
     TableView.backgroundColor   = [UIColor blackColor];
     TableView.separatorStyle    = UITableViewCellSeparatorStyleNone;
-    TableView.delegate  = self;
-    TableView.dataSource = self;
+    TableView.delegate  = self.tableViewDelegate;
+    TableView.dataSource = self.tableViewDataSource;
+    [TableView registerClass:[TLHomeCell class] forCellReuseIdentifier:@"HomeIdentifier"];
     [self addSubview:TableView];
 }
 
-#pragma mark - UITableViewDelegate && DataSource
-- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-    return 1;
+- (void)setHomeDataWithArray:(NSArray *)items {
+    [self.tableViewDataSource setTableViewDataSourceWithArray:items];
+    [TableView reloadData];
 }
-- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return 10;
+#pragma mark - Getter & Setter
+- (TLHomeArraryDataSource *)tableViewDataSource {
+    if (_tableViewDataSource == nil) {
+        HomeTableViewCellConfigureBlock configureBlock = ^(TLHomeCell *cell,id item){
+            cell.backgroundColor = kRandColor;
+        };
+        _tableViewDataSource = [[TLHomeArraryDataSource alloc] initWithCellIdentifier:@"HomeIdentifier" configureCellBlock:configureBlock];
+    }
+    return _tableViewDataSource;
 }
-- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    TLHomeCell *cell = [TLHomeCell createCellWithTableView:tableView];
-    return cell;
-}
-- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
-    return 100.0f;
-}
-- (CGFloat)tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section {
-    return 0.001f;
-}
-- (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section {
-    return 0.001f;
-}
-- (UIView *)tableView:(UITableView *)tableView viewForFooterInSection:(NSInteger)section {
-    return nil;
-}
-- (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section {
-    return nil;
+
+- (TLHomeArrayDelegate *)tableViewDelegate {
+    if (_tableViewDelegate == nil) {
+        _tableViewDelegate = [[TLHomeArrayDelegate alloc] init];
+    }
+    return _tableViewDelegate;
 }
 @end

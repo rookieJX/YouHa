@@ -9,5 +9,5 @@
 #import "TLBasicView.h"
 
 @interface TLHomeView : TLBasicView
-
+- (void)setHomeDataWithArray:(NSArray *)items;
 @end

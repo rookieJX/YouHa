@@ -11,6 +11,7 @@
 #import "TLHomeViewController.h"
 #import "TLMessageViewController.h"
 #import "TLProfileViewController.h"
+#import "TLTabBar.h"
 
 @interface TLTabBarController ()
 
@@ -20,6 +21,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
     self.tabBar.barStyle = UIBarStyleBlack;
     self.tabBar.tintColor   = [UIColor blackColor];
     [self setupAllChildVc];
@@ -57,6 +59,11 @@
               imageName:@"TabBar_Centren_nomal"
         selectImageName:@"TabBar_Centren_select"
        selectTitleColor:TLTintColor];
+    
+    // 替换系统的TabBar
+    TLTabBar *customerTabBar = [[TLTabBar alloc] init];
+    customerTabBar.frame = self.tabBar.bounds;
+    [self setValue:customerTabBar forKeyPath:@"tabBar"];
 }
 
 /**

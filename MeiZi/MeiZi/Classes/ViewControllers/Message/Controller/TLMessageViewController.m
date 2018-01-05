@@ -7,6 +7,7 @@
 //
 
 #import "TLMessageViewController.h"
+#import <FBShimmeringView.h>
 
 @interface TLMessageViewController ()
 
@@ -17,6 +18,18 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    self.view.backgroundColor   = [UIColor whiteColor];
+    
+    FBShimmeringView *shimmeringView = [[FBShimmeringView alloc] initWithFrame:self.view.bounds];
+    [self.view addSubview:shimmeringView];
+    
+    UILabel *loadingLabel = [[UILabel alloc] initWithFrame:shimmeringView.bounds];
+    loadingLabel.textAlignment = NSTextAlignmentCenter;
+    loadingLabel.text = NSLocalizedString(@"Shimmer", nil);
+    shimmeringView.contentView = loadingLabel;
+    
+    // Start shimmering.
+    shimmeringView.shimmering = YES;
 
 }
 
